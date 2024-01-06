@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(60deg, #BDB76B, #8FBC8F);
+}
+.menu{
+  position: relative;
+  width: 320px;
+  height: 120px;
+  background: linear-gradient(45deg, #F8F8FF, #E6E6FA);
+  box-shadow: 0 30px 30px rgba(0,0,0,.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: height .5s ease-in-out;
+}
+
+.menu.active{
+  height: 400px;
+}
+.menu .content{
+  display: flex;
+  align-items: center;
+}
+.menu .content .img{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.menu .content .img img{
+  position: relative;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu .content h2{
+  margin-left: 15px;
+  font-size: 18px;
+  color: #555;
+}
+.menu .content h2 span{
+  font-size: 14px;
+  font-weight: 400;
+  color: #BDB76B;
+}
+.navigation{
+  position: relative;
+  top:25px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  padding: 20px 0;
+}
+.navigation li{
+  list-style: none;
+  margin: 15px 0 ;
+}
+.navigation li a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  transition: .25s;
+}
+.navigation li a:hover{
+  color: #BDB76B;
+}
+.navigation li a ion-icon{
+  font-size: 19px;
+  margin-right: 15px;
+}
+.toggle{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #BDB76B;
+  color: #E6E6FA;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu .toggle ion-icon{
+  transition: transform, ease-in-out .5s;
+}
+.menu.active .toggle ion-icon{
+  transform: rotate(-180deg);
+}
