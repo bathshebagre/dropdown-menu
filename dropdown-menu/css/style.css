@@ -9,7 +9,7 @@ body{
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(60deg, #BDB76B, #8FBC8F);
-}
+}.
 .menu{
   position: relative;
   width: 320px;
